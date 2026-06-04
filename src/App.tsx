@@ -5,6 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import { Domain, DomainConfig } from './types';
 import { Artifact } from './components/Artifact';
 import { RegistrationForm } from './components/RegistrationForm';
@@ -281,6 +282,9 @@ export default function App() {
           </button>
         </div>
       </footer>
+      
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </main>
   );
 }
